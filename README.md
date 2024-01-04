@@ -1,4 +1,4 @@
-![image](https://github.com/536495251/LibrarySystem/assets/93455516/3bb50c3b-a301-4861-9e06-cfbf0d648bfd)# LibrarySystem
+# LibrarySystem
 
 科学技术学院
 SCIENCE & TECHNOLOGY COLLEGE OF 
