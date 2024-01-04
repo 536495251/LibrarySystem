@@ -1,4 +1,4 @@
-![image](https://github.com/536495251/LibrarySystem/assets/93455516/76534d8b-9d78-40e4-be12-16336d1c59c3)# LibrarySystem
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/3bb50c3b-a301-4861-9e06-cfbf0d648bfd)# LibrarySystem
 
 科学技术学院
 SCIENCE & TECHNOLOGY COLLEGE OF 
@@ -39,9 +39,7 @@ REPORT  ON  INTEGRATED  EXPERIMENT AND DESIGN
 互联网时代，图书无论是在种类上还是在数量上都呈现激增状态，高校学生在日常的学习过程中离不开图书馆的书本借阅，而传统的借阅形式很难在数百万册的图书中快速准 确的找到目标种类，查找类似题材时更是需要耗费大量时间 成本。传统的检索形式时间成本高、检索效率低，已经完全落后于时代。相较于传统形式，智能化书目推荐系统可以通过学生偏好、兴趣度等数据进行统计分析，从而有针对性的为读者推荐相应书目，既节省时间又更为准确。为了实现高校图书馆借阅系统中的个性化推荐，以图书归还时用户的评分，作为兴趣度分量，利用传统协同过滤推荐算法，实现了用户模块中推荐模块中的推荐书籍的功能。经过20名读者，10本书的实际借阅数据验证，选择单用户推荐，每个可以推荐书籍在3到5本，而选择多用户推荐时设置的最小相似度阈值在0.6到0.9才有图书可以推荐，而低于0.6时，一般不会有图书可以推荐。而推荐给用户的图书数量会增加到4到7本。为高校图书管理提供了智能化推荐手段。
 第二章  系统需求分析
 2.1 功能需求分析（需要绘制功能组织结构图，并加以论述）
-
-
-
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/11ce36a8-304b-43fa-8b8a-1a34dc59e961)
 首先基于传统协同过滤推荐算法图书借阅管理系统的登录形式分为管理员登录和读者登录。
 
 一、管理员登陆
@@ -94,20 +92,15 @@ REPORT  ON  INTEGRATED  EXPERIMENT AND DESIGN
 
 
 管理员用例模型图：
-
-
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/3869a88b-7c96-47db-be9a-f0d9bb30bb70)
 
 管理员登录系统后可在主页、管理图书、管理用户、处理反馈、退出登录,5个模块内进行操作，在主页可以进行借阅管理和归还管理两个操作。
 在管理图书模块可以对图书进行添加、下架、修改、查询操作。在管理用户模块可以对用户进行修改用户权限、查询用户、删除用户等操作。
 在处理反馈模块可对读者发送的消息进行操作。
 
-
-
-
-
-
-
 用户用例模型图：
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/9a408a26-b3a8-429e-898b-8b131ceaa4aa)
+
 
 读者登录系统后可在主页、我的图书、读者信息、联系管理员、退出登录，5个模块内进行操作，在主页可以进行查看全部图书、查看推荐图书、查找图书等操作。
 读者在我的图书模块可以查看读者已借阅的书籍和进行归还图书等操作。
@@ -130,6 +123,7 @@ REPORT  ON  INTEGRATED  EXPERIMENT AND DESIGN
 
 系统流程图：
 
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/c3e2ee8d-9b47-42a5-963a-b2f6f52acd46)
 
 
 进入系统用户首先登录，输入账号密码并选择管理员登录或读者登录。系统对其身份进行验证，若账号或密码错误则重新登录；若账号和密码正确则进入相应模块进行操作。操作完成后退出系统。
@@ -149,6 +143,7 @@ REPORT  ON  INTEGRATED  EXPERIMENT AND DESIGN
 
 
 管理员流程图（读者流程图类似）
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/2a509be6-9990-4fa6-a47f-0f02f2558e7b)
 
 
 管理员登录，账号和密码输入正确后，进入管理员操作界面，管理员可在主页、管理图书、管理用户、处理反馈、退出登录,5个模块内进行操作，在主页可以进行借阅管理和归还管理两个操作。
@@ -177,26 +172,32 @@ REPORT  ON  INTEGRATED  EXPERIMENT AND DESIGN
 
 
 传统协同过滤推荐算法流程图：
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/3b877a4e-58b8-4a3b-989d-cad13d32a845)
 
 
 协同过滤推荐算法设计：
 用户-物品评分关系模型
 设计存储用户和物品评分数据的数据库结构，以支持快速检索和更新，设计表示用户-物品评分关系表
- 
+ ![image](https://github.com/536495251/LibrarySystem/assets/93455516/4673272c-bd20-4511-83b5-2490ba0cfd30)
+
 算法实现
 实现基于用户的协同过滤算法，包括相似度计算、推荐生成等核心步骤。
 通过皮尔逊相关系数计算相似度
- 
+ ![image](https://github.com/536495251/LibrarySystem/assets/93455516/33798308-8df6-4a93-8107-241132c27e00)
+
 皮尔逊相关系数计算的是两个用户-物品评分向量的相关系数；例如a(6,0,0,8,9);b(0,0,9,9,5)
 表示有a，b用户对所有物品（示例数据中为5个物品）的评分向量，计算得出行为用户，列也为用户的相似度矩阵，该矩阵为对称矩阵，主对角都是1的一个相似度矩阵。
  
 根据用户相似度，计算待推荐用户u对与其最相似的K个用户购买过商品i的感兴趣程度：
- 
+ ![image](https://github.com/536495251/LibrarySystem/assets/93455516/b79c3b86-0121-4b6b-96f7-44f9fd839469)
+
 其中，S ( u ,K ) 为和用户u兴趣最接近的K个用户，rvi 代表用户对物品i 的兴趣，因为只是用了行为数据，所以rvi=1.
  
 单用户推荐中K为1，多用户推荐中K由最小相似度阈值决定。
 
 部分代码截图：
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/100c302d-fb6d-43f9-9bf3-a5f176510ec3)
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/7207125a-14f2-4ad2-bbe6-b3c5fabe6c79)
 
 
 	
@@ -208,10 +209,12 @@ REPORT  ON  INTEGRATED  EXPERIMENT AND DESIGN
 
 推荐结果展示：
 
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/4e56557b-12d1-44ff-8917-f0cd844945bb)
 
 3.2 数据库设计（需要绘制E-R图和逻辑表，并加以论述）
 
 E-R图：
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/3120cd38-4977-49d4-93b3-1226b3580c52)
 
 用户的属性有：借阅量、用户ID、姓名、性别、年龄、住址、联系方式、账号、密码、账号是否冻结。
 管理员的属性有：账号、密码、管理员ID。
@@ -222,6 +225,7 @@ E-R图：
 其中管理员管理用户和图书，用户可借阅和归还图书，并向用户推荐图书。
 
 逻辑表：
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/7110cd85-32fe-4f59-9aa0-286fcf8d5272)
 
 1．AdminTable(管理员信息表)
 字段名	数据类型	长度	主键否	描述
@@ -293,11 +297,14 @@ RecommendTable用于存放向读者用户推荐图书的推荐表的属性信息
 
 4.1  系统运行界面（截三个以上的系统运行界面的图，并加以论述）
 
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/0fb6a857-e60c-4d13-b436-dd1afdc056d0)
 
 管理员进入系统后首先显示借阅管理，点击表格后会显示图书信息。
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/0abd98dd-6305-4bdf-94c9-c1927b9c3595)
 
 
 在管理员界面的管理图书界面中的修改图书，首先显示表中全部图书的信息，输入要修改图书的ID后，鼠标移动，界面中会自动显示要修改的图书信息，编辑修改后的信息保存。
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/f16a45f8-7eb4-45f1-9974-4d1503c89d82)
 
 
 
@@ -312,9 +319,11 @@ RecommendTable用于存放向读者用户推荐图书的推荐表的属性信息
 在管理员界面的管理用户中的查询用户，首先看到的是全部的用户。
 可根据用户的账号、姓名、电话、住址进行模糊查询
 例如：
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/26ff1dc3-ac70-4478-88d7-8db9426dab36)
 
 输入信息后，点击查询，就会显示模糊查询的结果。
 
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/9900f18f-9f19-4843-942d-6c74874d770f)
 
 
 
@@ -326,18 +335,21 @@ RecommendTable用于存放向读者用户推荐图书的推荐表的属性信息
 
 
 进入读者用户的界面中，首先看到的是全部图书的信息。当点击表中任意图书会提示：请在搜索框中输入 点击的书名。
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/9a5611a3-6733-4335-8837-eb73e9a92b1c)
 
 
 
 
 点击查找书籍后，会显示图书信息，以及可以对该图书进行借阅。
 
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/390aed58-2cf0-47a1-921d-65e98d164694)
 
 
 
 
 在读者用户界面中的联系管理员模块中，可向管理员发送消息，点击发送后，按钮会进入5秒的休眠状态，防止读者连续点击。
 
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/c991a59a-7c48-4ba1-94dd-f59448b1c227)
 
 
 
@@ -346,7 +358,9 @@ RecommendTable用于存放向读者用户推荐图书的推荐表的属性信息
 当读者发送消息后，管理员界面可以接收到读者的消息，并可删除消息。
 
 4.2  项目文件截图（截取项目文件结构图，并加以论述）
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/37269b6f-1bc6-42fd-a2a9-cf7acfa017c0)
 
+![image](https://github.com/536495251/LibrarySystem/assets/93455516/b74ace3b-c4d2-45eb-a5e9-3d0078d8eee4)
 
 Admin.cs用于获取或设置账号和密码。
 AdminBook.cs 用于设置添加、下架、修改、查找图书的按钮和相关面板Panel。
